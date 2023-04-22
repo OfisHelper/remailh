@@ -4,39 +4,27 @@
     <meta charset="utf-8">
     <title>ReMailHelper - OfisHelper | GPT-3.5-Turbo API </title>
     <link rel="stylesheet" href="style.css">
-    <style>
-      /* Ajout du style pour l'image de chargement */
-      #loader {
-        display: none;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    </style>
   </head>
   <body>
     <center>
-      <h2>Rédacteur de Mail</h2>
-      <form action="/generate" method="post">
-        <h3 for="article_text"></h3>
-        <textarea style="resize: none;" required="required" placeholder="Faites un résumé du mail, nous l'approfondirons et le rédigeront avec soin :" rows="30" name="article_text" id="article_text" cols="60" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"></textarea>
-        <br><br><br>
-        <!-- Ajout de l'image de chargement -->
-        <button id="generateBtn" type="submit" onclick="showLoader()">Générer le mail</button>
-        <img id="loader" src="loading.gif" alt="Chargement...">
-        <script>
-          function showLoader() {
-            var generateBtn = document.getElementById("generateBtn");
-            var loader = document.getElementById("loader");
-
-            generateBtn.style.display = "none";
-            loader.style.display = "block";
-          }
-        </script>
-      </form>
-      <div id="result"></div>
-      <script src="script.js"></script>
-    </center>
+    <h2>Rédacteur de Mail</h2>
+    <form action="/generate" method="post">
+      <h3 for="article_text"></h3>
+      <textarea style="resize: none;" required="required" placeholder="Faites un résumé du mail, nous l'approfondirons et le rédigeront avec soin :" rows="30" name="article_text" id="article_text" cols="60" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"></textarea>
+      <br><br><br>
+      <button id="generate-button" type="submit">Générer le mail</button>
+      <div id="loader"></div>
+      <script>
+        const generateButton = document.querySelector("#generate-button");
+        const loader = document.querySelector("#loader");
+         generateButton.addEventListener("click", () => {
+      generateButton.style.display = "none";
+      loader.style.display = "inline-block";
+    });
+  </script>
+</form>
+<div id="result"></div>
+<script src="script.js"></script>
+        </center>
   </body>
 </html>
