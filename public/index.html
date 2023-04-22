@@ -12,15 +12,17 @@
       <h3 for="article_text"></h3>
       <textarea style="resize: none;" required="required" placeholder="Faites un résumé du mail, nous l'approfondirons et le rédigeront avec soin :" rows="30" name="article_text" id="article_text" cols="60" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"></textarea>
       <br><br><br>
-      <button type="submit">Générer le mail</button>
+      <button ID="p2" type="submit">Générer le mail</button>
       <script>let btn = document.querySelector("button");
 
         btn.addEventListener("click", active);
+        document.getElementById("p2").style.color = "grey";
+      
 
         function active() {
           btn.classList.toggle("is_active");
         }</script>
-      <button type="submit">Générer le mail</button>
+      <button ID="p2" type="submit">Générer le mail</button>
     </form>
     <div id="result"></div>
     <script src="script.js"></script>
