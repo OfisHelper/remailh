@@ -622,7 +622,7 @@ button{
     visibility: hidden;
   }
 
-.loader {
+#loader {
   border: 16px solid #f3f3f3; /* Couleur de fond du loader */
   border-top: 16px solid #3498db; /* Couleur de la barre de progression */
   border-radius: 50%;
