@@ -649,3 +649,20 @@ button{
   transform: translate(-50%, -50%);
 }
 
+form {
+  position: relative; /* ajouter une position relative à la div contenant le bouton et le spinner */
+}
+
+#generate-button {
+  position: absolute; /* positionner le bouton absolument à l'intérieur de la div */
+  top: 0;
+  left: 0;
+}
+
+#loader {
+  position: absolute; /* positionner le spinner absolument à l'intérieur de la div */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
