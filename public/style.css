@@ -637,31 +637,3 @@ button{
   100% { transform: rotate(360deg); }
 }
 
-#generate-button {
-  position: relative; /* ajouter une position relative pour pouvoir positionner le spinner à l'intérieur */
-}
-
-#generate-button:disabled + #loader {
-  display: inline-block; /* afficher le spinner lorsque le bouton est désactivé */
-  position: absolute; /* positionner le spinner à l'intérieur du bouton */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#generate-button {
-  position: absolute; /* positionner le bouton absolument à l'intérieur de la div parent */
-  top: 50%;
-  right: 20px; /* ajuster la position pour qu'elle corresponde à la position du spinner */
-  transform: translate(0, -50%);
-  width: calc(100% - 60px); /* ajuster la largeur pour qu'elle corresponde à la largeur de la div parent moins la largeur du spinner et des marges */
-  margin-right: 20px; /* ajouter une marge à droite pour séparer le bouton du spinner */
-}
-
-#loader {
-  position: absolute; /* positionner le spinner absolument à l'intérieur de la div parent */
-  top: 50%;
-  right: 0;
-  transform: translate(0, -50%);
-}
-
